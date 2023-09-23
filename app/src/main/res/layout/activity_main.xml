@@ -28,6 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.search.SearchView
         android:id="@+id/search_view"
         android:layout_width="0dp"

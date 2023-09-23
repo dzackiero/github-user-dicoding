@@ -3,4 +3,7 @@
     <string name="searchbar_hint">GitHub Username</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_page">Favorite Page</string>
+    <string name="switch_theme">Switch Theme</string>
+    <string name="favorite">Favorite</string>
 </resources>

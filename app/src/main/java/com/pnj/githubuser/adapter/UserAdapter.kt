@@ -3,7 +3,7 @@ package com.pnj.githubuser.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.pnj.githubuser.data.response.UserItem
+import com.pnj.githubuser.data.model.response.UserItem
 import com.pnj.githubuser.databinding.ItemRowUserBinding
 import com.pnj.githubuser.helper.loadImage
 

@@ -4,19 +4,34 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pnj.githubuser.data.response.GithubResponse
-import com.pnj.githubuser.data.response.UserItem
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
+import com.pnj.githubuser.data.model.response.GithubResponse
+import com.pnj.githubuser.data.model.response.UserItem
 import com.pnj.githubuser.data.retrofit.ApiConfig
+import com.pnj.githubuser.helper.preferences.SettingPreferences
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val pref: SettingPreferences) : ViewModel() {
     private val _result = MutableLiveData<List<UserItem>>()
     val result: LiveData<List<UserItem>> = _result
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
+
+    fun getThemeSettings(): LiveData<Boolean> {
+        return pref.getThemeSetting().asLiveData()
+    }
+
+    fun saveThemeSetting(isDarkModeActive: Boolean) {
+        viewModelScope.launch {
+            pref.saveThemeSetting(isDarkModeActive)
+            Log.d("THEME", "is Dark Mode : $isDarkModeActive")
+        }
+    }
 
     fun searchUsers(query: String) {
         if (query.isEmpty()) return

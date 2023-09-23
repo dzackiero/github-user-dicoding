@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pnj.githubuser.data.response.UserItem
+import com.pnj.githubuser.data.model.response.UserItem
 import com.pnj.githubuser.data.retrofit.ApiConfig.Companion.getApiService
 import com.pnj.githubuser.helper.SingleEvent
 import retrofit2.Call
@@ -12,12 +12,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class FollowViewModel : ViewModel() {
-    companion object {
-        const val TAB = "TAB"
-        const val USERNAME = "USERNAME"
-        const val FOLLOWERS = 0
-        const val FOLLOWING = 1
-    }
 
     private val _result = MutableLiveData<List<UserItem>>()
     val result: LiveData<List<UserItem>> = _result
@@ -57,4 +51,12 @@ class FollowViewModel : ViewModel() {
 
         })
     }
+
+    companion object {
+        const val TAB = "TAB"
+        const val USERNAME = "USERNAME"
+        const val FOLLOWERS = 0
+        const val FOLLOWING = 1
+    }
+
 }

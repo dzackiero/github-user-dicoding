@@ -14,12 +14,6 @@ import com.pnj.githubuser.helper.loadImage
 import com.pnj.githubuser.ui.follow.FollowViewModel
 
 class DetailActivity : AppCompatActivity() {
-    companion object {
-        val TAB_TITLES = listOf(
-            "Followers",
-            "Following",
-        )
-    }
 
     private lateinit var binding: ActivityDetailBinding
     private val viewModel: DetailViewModel by viewModels()
@@ -69,5 +63,12 @@ class DetailActivity : AppCompatActivity() {
         }.attach()
 
         supportActionBar?.elevation = 0f
+    }
+
+    companion object {
+        val TAB_TITLES = listOf(
+            "Followers",
+            "Following",
+        )
     }
 }

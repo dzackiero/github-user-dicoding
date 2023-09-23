@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.pnj.githubuser.data.model.UserDetail
-import com.pnj.githubuser.data.response.UserResponse
+import com.pnj.githubuser.data.model.response.UserResponse
 import com.pnj.githubuser.data.retrofit.ApiConfig
 import com.pnj.githubuser.helper.SingleEvent
 import retrofit2.Call

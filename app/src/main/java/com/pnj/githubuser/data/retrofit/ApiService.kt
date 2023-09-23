@@ -1,12 +1,12 @@
 package com.pnj.githubuser.data.retrofit
 
-import com.pnj.githubuser.data.response.GithubResponse
-import com.pnj.githubuser.data.response.UserItem
-import com.pnj.githubuser.data.response.UserResponse
+import com.pnj.githubuser.data.model.response.GithubResponse
+import com.pnj.githubuser.data.model.response.UserItem
+import com.pnj.githubuser.data.model.response.UserResponse
 import retrofit2.Call
 import retrofit2.http.*
 
-const val TOKEN = "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"
+const val TOKEN = "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"
 
 interface ApiService {
 
